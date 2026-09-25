@@ -1,10 +1,18 @@
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
+  min-height: 100vh;
+
   background:
     radial-gradient(
       circle at 10% 20%,
@@ -22,27 +30,18 @@ body {
       transparent 35%
     ),
     #f8f8ff;
-  font-family: Marker Felt;
-  margin-right: 75px;
-  margin-left: 0px;
+
+  font-family: "Marker Felt", "Comic Sans MS", cursive;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 0 8px 25px rgba(100, 80, 180, 0.267);
-}
-main {
- /*  margin-top: 100px;
-  margin-bottom: 100px; */
-  width: 100%;
 
-}
-.header-info {
-  display: flex;
-  justify-content: center;
+/* =========================================
+   HEADER
+========================================= */
+
+.quiz-navbar {
+  min-height: 70px;
+
   background:
     radial-gradient(
       circle at 10% 20%,
@@ -61,90 +60,194 @@ main {
     ),
     #f8f8ff;
 }
-.icon {
+
+.quiz-icon {
   width: 50px;
   height: 50px;
-  margin: 10px;
-  color: #000;
+  object-fit: contain;
 }
 
-/* ----- edit quesion card! -------- */
-.question-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  margin-left: 75px;
-  width: 100%;
+.quiz-title {
+  font-family: "Marker Felt", "Comic Sans MS", cursive;
 }
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.quiz-main {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+
+/* =========================================
+   QUESTION CARD
+========================================= */
+
 .question-card {
-  border: 1px solid #f8f8ff;
-  box-shadow: 0 8px 25px rgba(100, 80, 180, 0.267);
-  text-align: center;
-  margin: 30px;
-  margin-left: 40px;
-  border-radius: 10px;
-  width: 75%;
-  height: 300px;
-  background-color: #f8f8ff;
-  font-family: Monospace;
-  margin-top: 100px ;
-  margin-bottom: 100px;
   position: relative;
- 
+
+  width: 100%;
+  min-height: 300px;
+
+  padding: 30px 25px;
+
+  background-color: #f8f8ff;
+
+  border: 1px solid rgba(140, 100, 255, 0.08);
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(100, 80, 180, 0.267);
+
+  text-align: center;
+
+  font-family: monospace;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
-.idea-icon{
+
+.question-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(100, 80, 180, 0.32);
+}
+
+
+/* =========================================
+   IDEA ICON
+========================================= */
+
+.idea-icon {
   position: absolute;
+
   width: 50px;
   height: 50px;
-  right: 10px;
+
+  right: 15px;
   top: -25px;
 
+  object-fit: contain;
+
+  content: url("../image/idea-bulb.png");
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    right 0.25s ease;
 }
-.idea-icon:hover{
-  width: 75px;
-  height: 75px;
-  right: 0;
-  
+
+.idea-icon:active {
+   content: url("../image/lightbulb.png");
+  width: 70px;
+  height: 70px;
+  right: 5px;
 }
+
+
+/* =========================================
+   QUESTION TEXT
+========================================= */
+
 .question-p {
-  padding: 20px;
-  width: 100%;
+  min-height: 75px;
+
+  margin: 10px 0 20px;
+  padding: 10px;
+
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 1.6;
 }
+
+
+/* =========================================
+   SHOW ANSWER BUTTON
+========================================= */
+
 .show-btn {
-  padding: 15px 80px;
+  padding: 12px 45px;
+
   border: 2px solid rgba(255, 150, 220, 0.15);
-  box-shadow: 0 8px 25px rgba(100, 80, 180, 0.267);
   border-radius: 20px;
+
   background-color: rgba(255, 150, 220, 0.378);
-  font-family: Marker Felt;
+
+  box-shadow:
+    0 8px 25px rgba(100, 80, 180, 0.267);
+
+  font-family: "Marker Felt", "Comic Sans MS", cursive;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
+
 .show-btn:hover {
   background-color: rgba(255, 150, 220, 0.15);
+  transform: translateY(-2px);
 }
+
+
+/* =========================================
+   OPTIONS
+========================================= */
 
 .option-btn {
   display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 40px;
+
+  flex-wrap: wrap;
 }
+
 .option-btn button {
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 9px 18px;
+
   border: 2px solid rgba(255, 150, 220, 0.15);
-  box-shadow: 0 8px 25px rgba(100, 80, 180, 0.267);
-  font-family: Marker Felt;
+  border-radius: 10px;
+
+  background-color: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(100, 80, 180, 0.267);
+
+  font-family: "Marker Felt", "Comic Sans MS", cursive;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
+
 .option-btn button:hover {
   background-color: rgba(255, 150, 220, 0.378);
+  transform: translateY(-2px);
 }
-/* ------------- Footer------------------ */
-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.quiz-footer {
+  min-height: 70px;
+
   background:
     radial-gradient(
       circle at 10% 20%,
@@ -162,29 +265,95 @@ footer {
       transparent 20%
     ),
     #f8f8ff;
-  box-shadow: 0 8px 25px rgba(100, 80, 180, 0.267);
+
+  box-shadow:
+    0 8px 25px rgba(100, 80, 180, 0.267);
 }
-.footer-info {
-  display: flex;
-  justify-content: space-around;
-  
-}
+
 .footer-icon {
-  border: 0px;
-  background-color: transparent;
-  padding: 20px 25px;
-  margin-top: 0;
-  
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 70px;
+
+  color: #222;
+
+  font-size: 24px;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .footer-icon:hover {
   background-color: rgba(102, 51, 153, 0.389);
-  
+  color: #000;
 }
-@media screen and (min-width: 300px) and (max-width: 768px) {
- .question-container {
-  display: grid;
-  grid-template-columns: 1fr ;
- }
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .quiz-main {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .question-card {
+    min-height: 300px;
+    padding: 30px 20px;
+  }
+
+  .question-p {
+    font-size: 14px;
+  }
+
+  .show-btn {
+    padding: 11px 35px;
+  }
+
 }
-    
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+  .quiz-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .quiz-title {
+    font-size: 1.4rem;
+  }
+
+  .question-card {
+    min-height: 320px;
+  }
+
+  .option-btn {
+    margin-top: 30px;
+  }
+
+  .option-btn button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .footer-icon {
+    width: 70px;
+  }
+
+}
+
