@@ -132,30 +132,13 @@ body {
   right: 15px;
   top: -25px;
 
-  object-fit: contain;
-
-  content: url("../image/idea-bulb.png");
-
-  cursor: pointer;
-
-  transition:
-    width 0.25s ease,
-    height 0.25s ease,
-    right 0.25s ease;
 }
-
-.idea-icon:active {
-   content: url("../image/lightbulb.png");
-  width: 70px;
-  height: 70px;
-  right: 5px;
+.idea-icon:hover{
+  width: 75px;
+  height: 75px;
+  right: 0;
+  
 }
-
-
-/* =========================================
-   QUESTION TEXT
-========================================= */
-
 .question-p {
   min-height: 75px;
 
