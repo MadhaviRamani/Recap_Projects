@@ -33,6 +33,7 @@ header {
   top: 0;
   left: 0;
   box-shadow: 0 8px 25px rgba(100, 80, 180, 0.267);
+ z-index: 1;
 }
 main {
  /*  margin-top: 100px;
@@ -91,7 +92,7 @@ main {
   margin-top: 100px ;
   margin-bottom: 100px;
   position: relative;
-  z-index: -1;
+  
  
 }
 .idea-icon{
