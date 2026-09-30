@@ -408,21 +408,15 @@ body {
   margin: 45px 0 40px;
 }
 
-.profile-avatar {
-  width: 120px;
-  height: 120px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid #000;
-  border-radius: 50%;
-}
 
 .profile-avatar i {
   font-size: 70px;
   color: #000;
+  
+}
+.rounded-circle{
+  width: 120px;
 }
 
 .profile-name {
@@ -439,6 +433,7 @@ body {
 
 .about-section {
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .about-section h3,
@@ -454,9 +449,9 @@ body {
   min-height: 100px;
   margin: 0;
 
-  padding: 15px;
+  padding: 15px 0;
 
-  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.7); */
 
   font-family: monospace;
   font-size: 16px;
@@ -502,6 +497,7 @@ body {
 
 .settings-section {
   margin-top: 20px;
+  text-align: left;
 }
 
 .dark-mode-row {
@@ -514,7 +510,13 @@ body {
   font-family: "Marker Felt", "Comic Sans MS", cursive;
   font-size: 22px;
 }
-
+.setting-img{
+  width: 35px;
+  margin-right: 10px;
+}
+.setting-img:hover{
+  rotate: 30deg;
+}
 /* =========================
    DARK MODE TOGGLE
 ========================= */

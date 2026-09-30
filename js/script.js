@@ -1,6 +1,55 @@
+const bodyElement = document.querySelector('[data-js="body-mode"]');
+const darkModeToggle = document.querySelector('[data-js="toggle-button"]');
 
-const darkModeToggle = document.getElementById("darkModeToggle");
 
+darkModeToggle.addEventListener("click", () => {
+    bodyElement.classList.toggle("dark-mode");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 // Load saved dark mode
 if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark-mode");
@@ -21,4 +70,4 @@ if (darkModeToggle) {
       localStorage.setItem("darkMode", "disabled");
     }
   });
-}
+} */

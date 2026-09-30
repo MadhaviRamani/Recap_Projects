@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <!-- custom JS -->
-<script src="./js/script.js" defer></script>
+    <script src="./js/script.js" defer></script>
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
@@ -23,9 +23,11 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body>
+  <body data-js="body-mode">
     <!-- Header -->
-      <a href="./bookmark.html"></a>
+    <a href="./profile.html"></a>
+    <!-- ================= HEADER ================= -->
+
     <header class="fixed-top shadow-sm">
       <nav class="navbar quiz-navbar">
         <div class="container justify-content-center">
@@ -39,68 +41,68 @@
     </header>
     <!-- Main -->
     <main class="container-fluid quiz-main profile-page">
+      <section class="profile-section question-card">
+        <div class="container-fluid ">
+          <!-- Profile -->
+          <div class="profile-user ">
+            <div>
+              <i class="bi">
+                <img
+                  src="./image/woman.png"
+                  alt="womanphoto"
+                  class="rounded-circle"
+                />
+              </i>
+            </div>
 
-      <section class="profile-section">
-
-        <!-- Profile -->
-        <div class="profile-user">
-          <div class="profile-avatar">
-            <i class="bi bi-person"></i>
+            <h2 class="profile-name">Madhavi Ramani</h2>
           </div>
 
-          <h2 class="profile-name">Madhavi Ramani</h2>
+          <!-- About Me -->
+          <div class="about-section">
+            <h3>About me</h3>
+
+            <p>
+              I enjoy learning new things and testing my knowledge through
+              quizzes.
+            </p>
+          </div>
         </div>
-
-        <!-- About Me -->
-        <div class="about-section">
-          <h3>About me</h3>
-
-          <p>
-            I enjoy learning new things and testing my knowledge
-            through quizzes.
-          </p>
-        </div>
-
         <!-- Statistics -->
         <div class="profile-stats">
-
           <div class="profile-stat">
             <i class="bi bi-question-circle-fill"></i>
-            <span>12</span>
+            <span>10</span>
           </div>
 
           <div class="profile-stat">
             <i class="bi bi-bookmark-fill"></i>
-            <span>4</span>
+            <span>3</span>
           </div>
-
         </div>
 
         <!-- Settings -->
         <div class="settings-section">
-
-          <h3>Settings</h3>
+          
+          <h3>
+            <img src="./image/settings.png" alt="setting" class="setting-img">Settings</h3>
 
           <div class="dark-mode-row">
             <span>Dark Mode</span>
 
             <label class="dark-toggle">
-              <input type="checkbox" id="darkModeToggle" />
+              <input type="checkbox" data-js="toggle-button" />
               <span class="toggle-slider"></span>
             </label>
           </div>
-
         </div>
-
       </section>
-
     </main>
 
     <!-- Footer -->
     <footer class="fixed-bottom quiz-footer shadow-lg">
       <div class="container">
         <div class="d-flex justify-content-around">
-
           <a href="./index.html" class="footer-icon">
             <i class="bi bi-house-fill"></i>
           </a>
@@ -112,14 +114,11 @@
           <a href="./profile.html" class="footer-icon">
             <i class="bi bi-person-fill"></i>
           </a>
-
         </div>
       </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    
   </body>
 </html>
