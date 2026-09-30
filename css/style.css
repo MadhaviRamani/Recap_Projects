@@ -291,7 +291,6 @@ body {
   color: #000;
 }
 
-
 /* Dropdown box */
 
 .dropdown-menu {
@@ -303,15 +302,12 @@ body {
   border-radius: 15px;
 
   text-align: center;
-
-  
 }
-
 
 /* Answer */
 
 .dropdown-item {
-  position: static;       /* IMPORTANT */
+  position: static; /* IMPORTANT */
   width: 100%;
 
   padding: 10px 15px;
@@ -325,7 +321,7 @@ body {
 }
 
 .dropdown-item:active {
-  background-color: transparent!important;
+  background-color: transparent !important;
   color: #000 !important;
 }
 
@@ -408,14 +404,11 @@ body {
   margin: 45px 0 40px;
 }
 
-
-
 .profile-avatar i {
   font-size: 70px;
   color: #000;
-  
 }
-.rounded-circle{
+.rounded-circle {
   width: 120px;
 }
 
@@ -467,7 +460,7 @@ body {
   justify-content: center;
   gap: 50px;
 
-  margin: 35px 0 45px;
+  margin: 15px 0 45px;
 }
 
 .profile-stat {
@@ -510,11 +503,11 @@ body {
   font-family: "Marker Felt", "Comic Sans MS", cursive;
   font-size: 22px;
 }
-.setting-img{
+.setting-img {
   width: 35px;
   margin-right: 10px;
 }
-.setting-img:hover{
+.setting-img:hover {
   rotate: 30deg;
 }
 /* =========================
@@ -684,7 +677,7 @@ body.dark-mode .footer-icon {
   color: #fff;
 }
 /* =========================================
-   TABLET
+   HOME TABLET
 ========================================= */
 
 @media (max-width: 768px) {
@@ -708,7 +701,7 @@ body.dark-mode .footer-icon {
 }
 
 /* =========================================
-   MOBILE
+    HOME MOBILE
 ========================================= */
 
 @media (max-width: 576px) {
@@ -743,7 +736,6 @@ body.dark-mode .footer-icon {
 ========================================= */
 
 @media (max-width: 768px) {
-
   .bookmark-card {
     width: 85%;
     height: 300px;
@@ -763,14 +755,12 @@ body.dark-mode .footer-icon {
     width: 40%;
     min-width: 200px;
   }
-
 }
 /* =========================================
    BOOKMARK MOBILE
 ========================================= */
 
 @media (max-width: 576px) {
-
   .bookmark-card {
     width: 95%;
     height: 300px;
@@ -804,5 +794,74 @@ body.dark-mode .footer-icon {
     font-size: 13px;
     padding: 8px 10px;
   }
+}
 
+/* =========================
+   PROFILE MOBILE
+   ========================= */
+
+@media (max-width: 576px) {
+  .quiz-navbar {
+    padding: 12px 0;
+  }
+
+  .quiz-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .quiz-main {
+    padding: 80px 15px 90px;
+  }
+
+  .profile-section {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .profile-user {
+    gap: 10px;
+  }
+
+  .profile-user img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-stats {
+    gap: 20px;
+  }
+
+  .setting-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .quiz-footer {
+    padding: 10px 0;
+  }
+}
+/* =========================
+   PROFILE TABLET
+   ========================= */
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .quiz-main {
+    padding: 90px 30px 100px;
+  }
+
+  .profile-section {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  .profile-user img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .profile-name {
+    font-size: 1.7rem;
+  }
 }
