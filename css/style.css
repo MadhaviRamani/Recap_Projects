@@ -100,15 +100,8 @@ body {
   text-align: center;
 
   font-family: monospace;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
 }
 
-.question-card:hover {
-  box-shadow: 0 12px 30px rgba(100, 80, 180, 0.32);
-}
 
 /* =========================================
    IDEA ICON
@@ -119,17 +112,19 @@ body {
 
   width: 50px;
   height: 50px;
-  content: url("../image/idea-bulb.png");
+  
   right: 15px;
   top: -25px;
   cursor: pointer;
+  /* background-color: transparent; */
 }
-.idea-icon:active {
-  content: url("../image/lightbulb.png");
+/* .idea-icon:active {
+  
   width: 50px;
   height: 50px;
   right: 15px;
-}
+} */
+
 .question-p {
   min-height: 75px;
 

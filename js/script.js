@@ -39,16 +39,6 @@ darkModeToggle.addEventListener("click", () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* 
 // Load saved dark mode
 if (localStorage.getItem("darkMode") === "enabled") {
