@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quiz App</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- custom JS -->
+    <script src="./js/form.js" defer></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <a href="./index.html"></a>
+    <!-- ================= HEADER ================= -->
+    <header class="fixed-top shadow-sm">
+      <nav class="navbar quiz-navbar">
+        <div class="container justify-content-center">
+          <div class="d-flex align-items-center">
+            <img src="./image/brain.png" alt="Quiz Icon" class="quiz-icon" />
+
+            <h1 class="h3 mb-0 quiz-title">Quiz App</h1>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="container-fluid quiz-main">
+      <section>
+     <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h2 class="mb-4">Submit Your Question</h2>
+            <form id="question-form">
+              <div class="mb-3">
+                <label for="your-question" class="form-label">Your Question:</label>
+                <input type="text" class="form-control" id="your-question" required minlength="5" />
+              </div>
+              <div class="mb-3">
+                <label for="first-name" class="form-label">Your Answer:</label>
+                <input type="text" class="form-control" id="first-name" required minlength="1" />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+          </div>
+        </div>
+      </div>  
+
+
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="fixed-bottom quiz-footer shadow-lg">
+      <div class="container">
+        <div class="d-flex justify-content-around">
+          <a href="./bookmark.html" class="footer-icon">
+            <i class="bi bi-house-fill"></i>
+          </a>
+
+          <a href="./bookmark.html" class="footer-icon">
+           <i class="bi bi-bookmark-fill"></i>
+        
+
+          </a>
+<a href="./form.html" class="footer-icon">
+            <i class="bi bi-plus-circle-fill"></i>
+          </a>
+          <a href="./profile.html" class="footer-icon">
+            <i class="bi bi-person-fill"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</html>
