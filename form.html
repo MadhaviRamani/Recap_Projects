@@ -45,7 +45,7 @@
         <div class="container mt-5">
           <div class="row justify-content-center">
             <!--   ============ Form =============== -->
-            <div class="col-md-6">
+            <div class="col-md-6" data-js="form-container">
               <h2 class="mb-4">Submit Your Question</h2>
               <form id="question-form">
                 <div class="mb-3">
@@ -54,46 +54,54 @@
                   >
                   <textarea
                     type="text"
+                    data-js="question-input"
                     class="form-control"
                     id="your-question"
                     required
                     minlength="5"
-                  >
-                  </textarea>
+                  > </textarea>
+          
                 </div>
                 <div class="mb-3">
-                  <label for="your-answer" class="form-label"
+                  <label for="your-answer" class="form-label" 
                     >Your Answer:</label
                   >
                   <textarea
                     type="text"
-                    name="message"
+                    data-js="answer-input"
                     class="form-control"
                     id="your-answer"
                     required
                     minlength="1"
-                  >
-                  </textarea>
+                  > </textarea>
+                  
                 </div>
                 <div class="mb-3">
                   <label for="your-tag" class="form-label">Your Tag:</label>
                   <input
                     type="text"
-                    name="message"
+                    data-js="tag-input"
                     class="form-control"
                     id="your-tag"
                     required
                     minlength="1"
-                  ></input>
+                  >
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button
+                  type="submit"
+                  class="btn-primary"
+                  value="Submit"
+                  data-js="submit-button"
+                >
+                  Submit
+                </button>
               </form>
 
               <!-- ============== SUBMITTED QUESTION ============= -->
-              <div class="col-12" id="submitted-question-container">
-                <h3 class="mt-4">Submitted Question:</h3>
-                <article class="question-card">
+              <div class="col-12" id="submitted-question-container" data-js="question-container"> 
+               
+                <!-- <article class="question-card">
                   <div data-js="bookmark-containers">
                     <img
                       src="./image/idea-bulb.png"
@@ -109,13 +117,13 @@
                   </div>
 
                   <p class="question-p">
-                    What is the default display property for most HTML elements?
+                    hidWhat is the default display property for most HTML elements?
                   </p>
                   <div data-js="answerbtn-container">
                     <div class="answer hidden" data-js="answer-container">
-                      &lt;ol&gt; (ordered list)
+                      css
                     </div>
-                    <button class="show-btn" data-js="show-answer-btn">
+                    <button class="show-btn " data-js="show-answer-btn">
                       Show Answer
                     </button>
                   </div>
@@ -124,7 +132,7 @@
                     <button>Display</button>
                     <button>Elements</button>
                   </div>
-                </article>
+                </article> -->
               </div>
             </div>
           </div>
@@ -136,7 +144,7 @@
     <footer class="fixed-bottom quiz-footer shadow-lg">
       <div class="container">
         <div class="d-flex justify-content-around">
-          <a href="./bookmark.html" class="footer-icon">
+          <a href="./index.html" class="footer-icon">
             <i class="bi bi-house-fill"></i>
           </a>
 
