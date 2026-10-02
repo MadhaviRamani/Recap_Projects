@@ -1,0 +1,10 @@
+.form-control:focus {
+  border-color: #663399;
+  box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
+}
+.form-control{
+   
+    max-height: 100%;
+    overflow-wrap: break-word;
+    overflow: visible;
+}

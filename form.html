@@ -42,27 +42,93 @@
     <!-- ================= MAIN ================= -->
     <main class="container-fluid quiz-main">
       <section>
-     <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <h2 class="mb-4">Submit Your Question</h2>
-            <form id="question-form">
-              <div class="mb-3">
-                <label for="your-question" class="form-label">Your Question:</label>
-                <input type="text" class="form-control" id="your-question" required minlength="5" />
-              </div>
-              <div class="mb-3">
-                <label for="first-name" class="form-label">Your Answer:</label>
-                <input type="text" class="form-control" id="first-name" required minlength="1" />
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <!--   ============ Form =============== -->
+            <div class="col-md-6">
+              <h2 class="mb-4">Submit Your Question</h2>
+              <form id="question-form">
+                <div class="mb-3">
+                  <label for="your-question" class="form-label"
+                    >Your Question:</label
+                  >
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="your-question"
+                    required
+                    minlength="5"
+                  >
+                  </textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="your-answer" class="form-label"
+                    >Your Answer:</label
+                  >
+                  <textarea
+                    type="text"
+                    name="message"
+                    class="form-control"
+                    id="your-answer"
+                    required
+                    minlength="1"
+                  >
+                  </textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="your-tag" class="form-label">Your Tag:</label>
+                  <input
+                    type="text"
+                    name="message"
+                    class="form-control"
+                    id="your-tag"
+                    required
+                    minlength="1"
+                  ></input>
+                </div>
 
-            </form>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+              <!-- ============== SUBMITTED QUESTION ============= -->
+              <div class="col-12" id="submitted-question-container">
+                <h3 class="mt-4">Submitted Question:</h3>
+                <article class="question-card">
+                  <div data-js="bookmark-containers">
+                    <img
+                      src="./image/idea-bulb.png"
+                      class="idea-icon"
+                      data-js="nonbookmark"
+                    />
+                    <img
+                      src="./image/lightbulb.png"
+                      class="idea-icon"
+                      data-js="bookmark"
+                      hidden="hidden"
+                    />
+                  </div>
+
+                  <p class="question-p">
+                    What is the default display property for most HTML elements?
+                  </p>
+                  <div data-js="answerbtn-container">
+                    <div class="answer hidden" data-js="answer-container">
+                      &lt;ol&gt; (ordered list)
+                    </div>
+                    <button class="show-btn" data-js="show-answer-btn">
+                      Show Answer
+                    </button>
+                  </div>
+                  <div class="option-btn">
+                    <button>CSS</button>
+                    <button>Display</button>
+                    <button>Elements</button>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
-      </div>  
-
-
       </section>
     </main>
 
@@ -75,11 +141,9 @@
           </a>
 
           <a href="./bookmark.html" class="footer-icon">
-           <i class="bi bi-bookmark-fill"></i>
-        
-
+            <i class="bi bi-bookmark-fill"></i>
           </a>
-<a href="./form.html" class="footer-icon">
+          <a href="./form.html" class="footer-icon">
             <i class="bi bi-plus-circle-fill"></i>
           </a>
           <a href="./profile.html" class="footer-icon">
